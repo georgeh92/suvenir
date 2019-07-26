@@ -1,0 +1,179 @@
+  body  {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  	background-color: #481557;
+  	line-height: 1.8;
+  	font-family: Ubuntu, Roboto, Trebuchet MS, sans-serif;
+    color: #E2DCDE;
+    }
+  a {
+    text-decoration: none;
+    color: #F4C646;
+  }
+  a:hover{
+    color: #E2DCDE;
+  }
+  h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: #E2DCDE;
+  }
+  h2 {
+
+    font-size: 2em;
+    font-weight: 300;
+    line-height:1.2em;
+    color: #F4C646;
+  }
+  h3 {
+    font-weight: 400;
+    line-height:1.2em;
+    color: #F4C646;
+  }
+  nav {
+    display: inline-block;
+    width: 70%;
+    padding: 5% 9% 0;
+    vertical-align: top;
+    cursor: pointer;
+  }
+  nav li{
+    display: inline-block;
+    width: 12rem;
+    color: #F4C646;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  nav li:hover{
+    color: #E2DCDE;
+    font-weight: 400;
+  }
+  .materials-sub-menu{
+    position:absolute;
+    z-index: 2;
+  }
+  .materials-sub-menu li{
+    display: block;
+    width: 7rem;
+    margin-left: -2rem;
+    font-size: 1.1rem;
+  }
+  .contacts{
+    position:absolute;
+    z-index: 2;
+  }
+  .contacts li{
+    display: block;
+    width: 7rem;
+    margin-left: -2rem;
+    font-size: 1.1rem;
+  }
+  .social{
+    width: 100%;
+    background-color: #350c41;
+    padding: 1% 11%;
+    text-align: left;
+  }
+  .social img{
+    padding: 1%;
+  }
+  .logo{
+    width: 100%;
+    padding: 3% 11% 0;
+  }
+
+  .chislo1 {
+    color: #F4C646;
+    font-size: 140%;
+    font-family: sans-serif;
+    position: relative;
+  }
+  .chislo {
+    color: #E2DCDE;
+    font-family: sans-serif;
+    position: relative;
+  }
+  .letter {
+    color: #F4C646
+  } 
+  .blog-article {
+    display: inline-block;
+    width: 45%;
+    padding: 3% 11%;
+    vertical-align: top;
+    color: #E2DCDE;
+  }
+  .menu-blog-article {
+    display: inline-block;
+    width: 20%;
+    padding: 2%;
+    vertical-align: top;
+  }
+  .line {
+    border-left-color: #F4C646;
+    border-left-style: dotted;
+    border-left-width: 3px;
+   }
+  .menu-blog-article-link{
+    cursor: pointer;
+    padding: 1% 3%;
+    width: 21rem;
+    color: #F4C646;
+  }
+  .menu-blog-article-link:hover {
+    color: #E2DCDE;
+    font-weight: 500;
+  }
+
+  .video-file {
+  position: relative;
+  width:30%;
+  display: inline-block;
+  vertical-align: middle;
+  margin:10px;
+  }
+
+  /* Анимация навигации меню */
+  .NavDownUp-enter, .NavDownUp-enter-active {
+    animation: slideInDown .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .NavDownUp-leave, .NavDownUp-leave-active {
+    animation: slideInDown .5s reverse cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+
+  @keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -17%, 0);
+      transform: translate3d(0, -17%, 0);
+      visibility: visible;
+    }
+
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+
+/* Анимация появления поста */
+  .showBlogArticle-enter, .showBlogArticle-enter-active {
+    animation: zoomIn .5s ease;
+  }
+  .showBlogArticle-leave, .showBlogArticle-leave-active {
+    animation: zoomIn .5s reverse;
+  }
+
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(.3, .3, .3);
+      transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
