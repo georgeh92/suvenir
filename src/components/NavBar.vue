@@ -23,20 +23,25 @@
           flat
           dark
           v-on="on"
+
         >
           Материалы
         </v-btn>
       </template>
 
-      <v-list class="primary secondary--text">
-        <v-list-tile
+      <v-btn
           v-for="(material, index) in materials"
           :key="index"
           @click=""
-        >
-          <v-list-tile-title>{{ material.title }}</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
+          color="secondary"
+          class="d-flex"
+          flat
+          dark
+          router
+          :to="material.link"
+
+        >{{ material.title }}</v-btn>
+
     </v-menu>
     <v-menu open-on-hover down offset-y>
       <template v-slot:activator="{ on }">
@@ -50,19 +55,36 @@
         </v-btn>
       </template>
 
-
         <v-btn
           v-for="(contact, index) in contacts"
           :key="index"
           @click=""
           color="secondary"
+          class="d-flex"
           flat
           dark
           router
-          to="/Surpriz"
-        >
-          {{ contact.title }}
+          :to="contact.link"
+        >{{ contact.title }}
         </v-btn>
+  <!-- 
+   <v-list class="primary secondary--text">
+        <v-list-tile
+          v-for="(contact, index) in contacts"
+          :key="index"
+          @click=""
+          color="primary"
+          flat
+          dark
+          router
+          z-index="999"
+          :to="contact.link"
+        >
+          <v-list-tile-title>{{ contact.title }}</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+-->
+
     </v-menu>
     </v-toolbar-items>
     <v-spacer></v-spacer>
@@ -79,16 +101,16 @@
         { title: 'Eleqance', link:'/Eleqance' },
       ],
       contacts: [
-        { title: 'Преподаватели' },
-        { title: 'Расписание' },
-        { title: 'Родителям' },
-        { title: 'Контакты' }
+        { title: 'Преподаватели', link:'/Pressa'  },
+        { title: 'Расписание', link:'/schedule'  },
+        { title: 'Родителям', link:'/Pressa'  },
+        { title: 'Контакты', link:'/Pressa'  }
       ],
       materials: [
-        { title: 'Фото' },
-        { title: 'Видео' },
-        { title: 'Статьи' },
-        { title: 'Дипломы' }
+        { title: 'Фото', link:'/fotos'  },
+        { title: 'Видео', link:'/Pressa'  },
+        { title: 'Статьи', link:'/Pressa' },
+        { title: 'Дипломы', link:'/Pressa'  }
       ]
     })
   }
